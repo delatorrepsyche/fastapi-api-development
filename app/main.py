@@ -17,6 +17,15 @@ print(settings.database_username)
 # To automatically install the libraries inside the requirements.txt file
 # pip install -r requirements.txt
 
+# Creating a virtual environment
+# py -3 -m venv venv
+
+# Running on virtual environment interpreter instead of global interpreter
+# venv\Scripts\activate.bat
+
+# Running the server
+# uvicorn app.main:app --reload
+
 origins = ["*"]
 
 app = FastAPI()
@@ -27,16 +36,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
-
-# Creating a virtual environment
-# py -3 -m venv venv
-
-# Running on virtual environment interpreter instead of global interpreter
-# venv\Scripts\activate.bat
-
-# Running the server
-# uvicorn app.main:app --reload
 
 # my_post = [{"title": "title of post 1", "content": "content of post 1", "id": 1},
 # {"title": "favorite food", "content": "I like pizza", "id": 2}]
